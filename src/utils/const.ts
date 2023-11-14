@@ -34,14 +34,14 @@ const MAP_HEIGHT = 600;
 const ROAD_LABEL_DISPLAY = true;
 
 // IF you outside China please make sure IS_CHINESE = false
-const IS_CHINESE = true;
+const IS_CHINESE = false;
 const USE_ANIMATION_FOR_GRID = false;
 const CHINESE_INFO_MESSAGE = (yearLength: number, year: string): string => {
   const yearStr = year === 'Total' ? '所有' : ` ${year} `;
   return `我用 App 记录自己运动 ${yearLength} 年了，但是里面混杂着跑步走路的数据（凑活看吧）。下面列表展示的是${yearStr}的数据`;
 };
 const ENGLISH_INFO_MESSAGE = (yearLength: number, year: string): string =>
-  `Running Journey with ${yearLength} Years, the table shows year ${year} data`;
+  `${yearLength} Years of Running/Walking, the table shows year ${year}. Data of running and walking before sep 23 was mixed, messing up the overall statistics.`;
 
 // not support English for now
 const CHINESE_LOCATION_INFO_MESSAGE_FIRST =
@@ -83,7 +83,7 @@ export {
   MAP_HEIGHT,
 };
 
-const nike = 'rgb(224,237,94)'; // if you want change the main color change here src/styles/variables.scss
+const nike = '#96ffc7'; // if you want change the main color change here src/styles/variables.scss
 
 // If your map has an offset please change this line
 // issues #92 and #198

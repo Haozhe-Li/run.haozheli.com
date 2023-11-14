@@ -10,18 +10,22 @@ interface ISiteMetadataResult {
 }
 
 const data: ISiteMetadataResult = {
-  siteTitle: '运动',
+  siteTitle: 'RUN With Me',
   siteUrl: 'https://run.haozheli.com',
   logo: 'https://www.haozheli.com/assets/img/apple-touch-icon.png',
   description: 'Personal site and blog',
   navLinks: [
     {
-      name: 'Github',
+      name: 'Running Facts',
+      url: 'https://haozheli.com/run.html',
+    },
+    {
+      name: 'About Me',
       url: 'https://github.com/Haozhe-Li/run',
     },
     {
-      name: 'About',
-      url: 'https://haozheli.com',
+      name: 'About This Project',
+      url: 'https://github.com/Haozhe-Li/run',
     },
   ],
 };
