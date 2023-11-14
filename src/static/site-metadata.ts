@@ -20,11 +20,12 @@ const data: ISiteMetadataResult = {
       url: 'https://haozheli.com/run.html',
     },
     {
-      name: 'About Me',
-      url: 'https://haozheli.com',
-    },{
       name: 'Strava',
       url: 'https://www.strava.com/athletes/haozheli',
+    },
+    {
+      name: 'About Me',
+      url: 'https://haozheli.com',
     },
     {
       name: 'About This Project',
