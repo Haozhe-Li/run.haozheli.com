@@ -30,28 +30,30 @@ const YearStat = ({ year, onClick }: { year: string, onClick: (_year: string) =>
   let heartRateNullCount = 0;
   let totalMetersAvail = 0;
   let totalSecondsAvail = 0;
+  let count = 0;
   runs.forEach((run) => {
     sumDistance += run.distance || 0;
-    if (run.average_speed) {
-      pace += run.average_speed;
-      totalMetersAvail += run.distance || 0;
-      totalSecondsAvail += (run.distance || 0) / run.average_speed;
-    } else {
-      paceNullCount++;
-    }
-    if (run.average_heartrate) {
-      heartRate += run.average_heartrate;
-    } else {
-      heartRateNullCount++;
-    }
-    if (run.streak) {
-      streak = Math.max(streak, run.streak);
+    if (run.average_speed >= 2.3) {
+      count += 1;
+      if (run.average_speed) {
+        pace += run.average_speed;
+        totalMetersAvail += run.distance || 0;
+        totalSecondsAvail += (run.distance || 0) / run.average_speed;
+      } else {
+        paceNullCount++;
+      }
+      if (run.average_heartrate) {
+        heartRate += run.average_heartrate;
+      } else {
+        heartRateNullCount++;
+      }
+      
     }
   });
-  sumDistance = parseFloat((sumDistance / 1000.0).toFixed(1));
+  sumDistance = parseFloat((totalMetersAvail / 1000.0).toFixed(1));
   const avgPace = formatPace(totalMetersAvail / totalSecondsAvail);
   const hasHeartRate = !(heartRate === 0);
-  const avgHeartRate = (heartRate / (runs.length - heartRateNullCount)).toFixed(
+  const avgHeartRate = (heartRate / (count - heartRateNullCount)).toFixed(
     0
   );
   return (
@@ -62,10 +64,9 @@ const YearStat = ({ year, onClick }: { year: string, onClick: (_year: string) =>
     >
       <section>
         <Stat value={year} description=" Journey" />
-        <Stat value={runs.length} description=" Runs" />
+        <Stat value={count} description=" Runs" />
         <Stat value={sumDistance} description=" KM" />
         <Stat value={avgPace} description=" Avg Pace" />
-        <Stat value={`${streak} day`} description=" Streak" />
         {hasHeartRate && (
           <Stat value={avgHeartRate} description=" Avg Heart Rate" />
         )}
