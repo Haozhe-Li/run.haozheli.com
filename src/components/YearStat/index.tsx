@@ -33,7 +33,7 @@ const YearStat = ({ year, onClick }: { year: string, onClick: (_year: string) =>
   let count = 0;
   runs.forEach((run) => {
     sumDistance += run.distance || 0;
-    if (run.average_speed >= 2.3) {
+    if (run.average_speed >= 2.3 && run.average_speed <=5) {
       count += 1;
       if (run.average_speed) {
         pace += run.average_speed;
