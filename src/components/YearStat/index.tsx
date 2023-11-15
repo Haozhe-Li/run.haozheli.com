@@ -66,8 +66,8 @@ const YearStat = ({ year, onClick }: { year: string, onClick: (_year: string) =>
       <section>
         <Stat value={year} description=" Journey" />
         <Stat value={count} description=" Runs" />
-        <Stat value={sumDistance} description=" Total KM" />
-        <Stat value={avgDistance} description=" Avg KM each" />
+        <Stat value={sumDistance} description=" Distance" />
+        <Stat value={avgDistance} description=" Avg Distance" />
         <Stat value={avgPace} description=" Avg Pace" />
         {hasHeartRate && (
           <Stat value={avgHeartRate} description=" Avg Heart Rate" />
@@ -78,7 +78,7 @@ const YearStat = ({ year, onClick }: { year: string, onClick: (_year: string) =>
           <YearSVG className={styles.yearSVG} />
         </React.Suspense>
       )}
-      <hr color="red" />
+      <hr color="green" />
     </div>
   );
 };
