@@ -10,7 +10,7 @@ interface ISiteMetadataResult {
 }
 
 const data: ISiteMetadataResult = {
-  siteTitle: 'RUN with Haozhe',
+  siteTitle: 'RUN',
   siteUrl: 'https://run.haozheli.com',
   logo: 'https://www.haozheli.com/assets/img/apple-touch-icon.png',
   description: 'Personal site and blog',

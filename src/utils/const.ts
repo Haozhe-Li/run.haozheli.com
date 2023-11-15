@@ -41,7 +41,7 @@ const CHINESE_INFO_MESSAGE = (yearLength: number, year: string): string => {
   return `我用 App 记录自己运动 ${yearLength} 年了，但是里面混杂着跑步走路的数据（凑活看吧）。下面列表展示的是${yearStr}的数据`;
 };
 const ENGLISH_INFO_MESSAGE = (yearLength: number, year: string): string =>
-  `${yearLength} Years of Running/Walking, the table shows year ${year}. Data of running and walking before sep 23 was mixed, messing up the overall statistics.`;
+  `${yearLength} Years of Running, the table shows year ${year} data.`;
 
 // not support English for now
 const CHINESE_LOCATION_INFO_MESSAGE_FIRST =
