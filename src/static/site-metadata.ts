@@ -16,7 +16,7 @@ const data: ISiteMetadataResult = {
   description: 'Personal site and blog',
   navLinks: [
     {
-      name: 'Running Facts',
+      name: 'About',
       url: 'https://haozheli.notion.site/About-My-Running-29f48946466646ae9d4dda75789169eb?pvs=4',
     },
     {
@@ -24,11 +24,7 @@ const data: ISiteMetadataResult = {
       url: 'https://www.strava.com/athletes/haozheli',
     },
     {
-      name: 'About Me',
-      url: 'https://haozheli.com',
-    },
-    {
-      name: 'About This Project',
+      name: 'Github',
       url: 'https://github.com/Haozhe-Li/run',
     },
     
