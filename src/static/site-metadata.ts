@@ -17,7 +17,7 @@ const data: ISiteMetadataResult = {
   navLinks: [
     {
       name: 'Running Facts',
-      url: 'https://haozheli.com/run.html',
+      url: 'https://haozheli.notion.site/About-My-Running-29f48946466646ae9d4dda75789169eb?pvs=4',
     },
     {
       name: 'Strava',
