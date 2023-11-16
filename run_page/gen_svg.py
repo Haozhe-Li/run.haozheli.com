@@ -90,8 +90,8 @@ def main():
         dest="background_color",
         metavar="COLOR",
         type=str,
-        default="#222222",
-        help='Background color of poster (default: "#222222").',
+        default="#040404",
+        help='Background color of poster (default: "#040404").',
     )
     args_parser.add_argument(
         "--track-color",
