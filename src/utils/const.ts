@@ -35,7 +35,7 @@ const ROAD_LABEL_DISPLAY = true;
 
 // IF you outside China please make sure IS_CHINESE = false
 const IS_CHINESE = false;
-const USE_ANIMATION_FOR_GRID = false;
+const USE_ANIMATION_FOR_GRID = true;
 const CHINESE_INFO_MESSAGE = (yearLength: number, year: string): string => {
   const yearStr = year === 'Total' ? '所有' : ` ${year} `;
   return `我用 App 记录自己运动 ${yearLength} 年了，但是里面混杂着跑步走路的数据（凑活看吧）。下面列表展示的是${yearStr}的数据`;
